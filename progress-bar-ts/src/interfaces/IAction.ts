@@ -1,4 +1,4 @@
 export default interface IAction {
-    name: "percentage" | "theme" | "color";
-    value: string | number;
+    name: "percentage" | "theme" | "color" | "isError";
+    value: string | number | boolean;
 }
