@@ -6,9 +6,10 @@ import { IReducer } from "../interfaces/IReducer";
 
 const context: IContext = {
     percentage: 0,
+    previousPercentage: 0,
     theme: "system",
     color: "Red",
-    isError: false
+    isError: false,
 };
 
 let MainContext: React.Context<IReducer>;

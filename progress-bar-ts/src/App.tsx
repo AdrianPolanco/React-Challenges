@@ -1,9 +1,9 @@
 import "./index.css";
 import InputPercentage from "./components/InputPercentage";
-import ProgressBar from "./components/ProgressBar";
 import { MainContext } from "./contexts/MyContext";
 import ErrorAlert from "./components/ErrorAlert";
 import { useContext } from "react";
+import ProgressBarComponent from "./components/ProgressBar";
 
 function App() {
     const [state, dispatch] = useContext(MainContext);
@@ -16,7 +16,7 @@ function App() {
             </div>
 
             <div className="flex flex-row justify-center mt-48 xl:mt-32 lg:mt-44 md:mt-44 sm:mt-44">
-                <ProgressBar />
+                <ProgressBarComponent />
             </div>
             <div className="flex flex-row justify-center gap-4 mt-10 xl:mt-12 lg:mt-14 md:mt-14 sm:mt-14">
                 <label className="xl:text-xl">Input percentage:</label>
