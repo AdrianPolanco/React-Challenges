@@ -18,8 +18,12 @@ const ProgressBarComponent = (): JSX.Element => {
                     width: props.value.to((v) => `${v}%`),
                     transition: "1.5s ease 0.3s",
                 }}
-                className={`bg-gradient-to-r from-blue-800 via-blue-500 to-blue-400 rounded-full h-5 shadow-[0_0_3px_blue]`}
-            ></animated.div>
+                className={`flex flex-row justify-center bg-gradient-to-r from-blue-800 via-blue-500 to-blue-400 rounded-full h-5 shadow-[0_0_3px_blue]`}
+            >
+                {percentage > 3 && (
+                    <p className="text-white">{`${percentage}%`}</p>
+                )}
+            </animated.div>
         </div>
     );
 };
