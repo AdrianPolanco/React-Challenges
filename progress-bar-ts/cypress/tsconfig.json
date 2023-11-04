@@ -1,11 +1,9 @@
 {
     "compilerOptions": {
-        "strict": true,
-        "baseUrl": "../node_modules",
         "target": "es2020",
         "lib": ["es2020", "dom"],
         "types": ["cypress", "node"],
-        "jsx": "react-jsx"
+        "allowImportingTsExtensions": true
     },
-    "include": ["**/*.ts", "**/*.tsx"]
+    "include": ["**/*.ts", "**/*.tsx", "./support/component.ts"]
 }

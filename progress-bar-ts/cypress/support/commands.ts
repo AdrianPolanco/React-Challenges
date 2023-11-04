@@ -1,4 +1,4 @@
-/// <reference types="cypress" />
+// <reference types="cypress" />
 // ***********************************************
 // This example commands.ts shows you how to
 // create various custom commands and overwrite
@@ -35,3 +35,13 @@
 //     }
 //   }
 // }
+
+// React 18
+import { mount } from "cypress/react18";
+
+/*Cypress.Commands.add("mount", (component, options) => {
+    // Wrap any parent components needed
+    // ie: return mount(<MyProvider>{component}</MyProvider>, options)
+    return mount(component, options);
+});*/
+Cypress.Commands.add("mount", mount)
