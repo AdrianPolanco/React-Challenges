@@ -13,7 +13,7 @@ const InputPercentage = (): JSX.Element => {
             min={0}
             max={100}
             data-is-error={state.isError}
-            className="border border-solid border-black rounded-md w-2/12 xl:w-1/12 lg:w-2/12 md:w-2/12 sm:w-2/12"
+            className="border border-solid dark:border-white border-black rounded-md w-2/12 xl:w-1/12 lg:w-2/12 md:w-2/12 sm:w-2/12"
             onBlur={(e: React.ChangeEvent<HTMLInputElement>) => {
                 const percentageValue: number = Number(e.target.value);
 
