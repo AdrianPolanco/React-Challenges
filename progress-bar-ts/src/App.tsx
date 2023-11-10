@@ -17,6 +17,7 @@ function App() {
     });
 
     const [state, dispatch] = useContext(MainContext);
+
     const GetTheme = (): string | null => {
         const theme: string | null = localStorage.getItem("theme");
         return theme;
@@ -26,6 +27,7 @@ function App() {
         const isRefreshed: string | null = localStorage.getItem("refreshed");
         return isRefreshed;
     };
+
     useEffect(() => {
         PageRefreshed(true);
         const theme: string | null = GetTheme();
@@ -35,12 +37,6 @@ function App() {
             document.querySelector("html")?.classList.add("dark");
         PageRefreshed(false);
     }, []);
-
-    const SaveTheme = (): void => {
-        const isDarkMode = document.documentElement.classList.contains("dark");
-        localStorage.setItem("theme", isDarkMode ? "dark" : "light");
-        PageRefreshed(false);
-    };
 
     const toggleTheme = () => {
         if (document.documentElement.classList.contains("dark")) {
@@ -54,9 +50,6 @@ function App() {
 
     const PageRefreshed = (refreshed: boolean): void => {
         localStorage.setItem("refreshed", `${refreshed}`);
-    };
-    const removeTheme = (): void => {
-        document.querySelector("html")?.classList.remove("dark");
     };
 
     return (
