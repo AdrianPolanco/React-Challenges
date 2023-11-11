@@ -2,7 +2,8 @@ import { useContext } from "react";
 import { MainContext } from "../contexts/MyContext";
 import { animated, useSpring } from "@react-spring/web";
 const ProgressBarComponent = (): JSX.Element => {
-    const [state, dispatch] = useContext(MainContext);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const [state] = useContext(MainContext);
     const { percentage, previousPercentage } = state;
 
     const props = useSpring({

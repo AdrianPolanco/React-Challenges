@@ -1,0 +1,6 @@
+cypress
+node_modules
+.Dockerfile
+.dockerignore
+.gitignore
+.eslintrc.cjs

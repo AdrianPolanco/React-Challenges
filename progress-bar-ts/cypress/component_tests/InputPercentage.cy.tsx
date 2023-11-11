@@ -4,6 +4,7 @@ import InputPercentage from "../../src/components/InputPercentage";
 import "../../src/index.css";
 
 const TestAppInput = () => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [state, dispatch] = useContext(MainContext);
 
     return (

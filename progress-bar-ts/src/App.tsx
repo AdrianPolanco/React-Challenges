@@ -2,21 +2,13 @@ import "./index.css";
 import InputPercentage from "./components/InputPercentage";
 import { MainContext } from "./contexts/MyContext";
 import ErrorAlert from "./components/ErrorAlert";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import ProgressBarComponent from "./components/ProgressBar";
-import Toggler from "./components/Toggler";
 import { DarkThemeToggle, Flowbite } from "flowbite-react";
 
 function App() {
-    const [theme, setTheme] = useState(() => {
-        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-            return "dark";
-        }
-
-        return "light";
-    });
-
-    const [state, dispatch] = useContext(MainContext);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const [state] = useContext(MainContext);
 
     const GetTheme = (): string | null => {
         const theme: string | null = localStorage.getItem("theme");
